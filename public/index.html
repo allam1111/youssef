@@ -1,154 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allam AI | The Future of Voice Assistance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cyan-neon: #00f3ff;
-            --purple-neon: #bc00ff;
-            --dark-bg: #050505;
-            --carbon: #121212;
-            --silver: #e0e0e0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
-        }
-
-        body {
-            background-color: var(--dark-bg);
-            color: var(--silver);
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(188, 0, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(0, 243, 255, 0.15) 0%, transparent 50%);
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 800px;
-            padding: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo {
-            font-size: 5rem;
-            font-weight: 900;
-            letter-spacing: 0.5rem;
-            background: linear-gradient(90deg, var(--cyan-neon), var(--purple-neon));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.5));
-            animation: pulse 3s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.3)); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 25px rgba(188, 0, 255, 0.6)); transform: scale(1.02); }
-        }
-
-        .tagline {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            color: var(--silver);
-            opacity: 0.8;
-            margin-bottom: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3rem;
-        }
-
-        .status-box {
-            background: rgba(18, 18, 18, 0.8);
-            border: 1px solid rgba(0, 243, 255, 0.3);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            display: inline-block;
-        }
-
-        .status-dot {
-            width: 12px;
-            height: 12px;
-            background-color: var(--cyan-neon);
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 10px;
-            box-shadow: 0 0 10px var(--cyan-neon);
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-
-        .btn {
-            margin-top: 2rem;
-            padding: 1rem 3rem;
-            background: transparent;
-            border: 1px solid var(--cyan-neon);
-            color: var(--cyan-neon);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.2rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background: var(--cyan-neon);
-            color: var(--dark-bg);
-            box-shadow: 0 0 20px var(--cyan-neon);
-        }
-
-        .grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: 0;
-            perspective: 1000px;
-            transform: rotateX(60deg) translateY(-200px);
-            opacity: 0.3;
-        }
-    </style>
+    <title>تحميل تطبيق علام AI - Allam Voice Assistant</title>
+    <meta name="description" content="حمل الآن تطبيق علام، المساعد الشخصي الصوتي المطور بالذكاء الاصطناعي.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="grid"></div>
-    <div class="container">
-        <h1 class="logo">Allam AI</h1>
-        <p class="tagline">Neural Voice Interface Protocol</p>
-        
-        <div class="status-box">
-            <p><span class="status-dot"></span> HOSTING ONLINE</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.5;">Project ID: allam-9304d</p>
-        </div>
 
-        <br>
-        <a href="#" class="btn">Launch Interface</a>
+    <div class="container">
+        <div class="logo">علام AI</div>
+        <h1>مساعدك الشخصي الصوتي المطور</h1>
+        <p class="description">
+            اختبر تجربة فريدة مع تطبيق علام، أول مساعد صوتي مصري يفهمك ويتحدث معك بذكاء فائق. حمله الآن وابدأ المحادثة!
+        </p>
+
+        <!-- رابط التحميل من GitHub Releases -->
+        <a href="https://github.com/allam1111/youssef/releases/download/v1.0/app-debug.apk" class="download-btn" id="downloadLink">
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+            </svg>
+            تنزيل تطبيق APK
+        </a>
+
+        <div class="footer">
+            الإصدار الحالي: v1.0.0 | آمن وموثوق 100%
+        </div>
     </div>
+
+    <script>
+        // ميكرو-أنيميشن بسيط عند الضغط
+        const btn = document.getElementById('downloadLink');
+        btn.addEventListener('click', () => {
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => btn.style.transform = '', 150);
+        });
+    </script>
 </body>
 </html>
