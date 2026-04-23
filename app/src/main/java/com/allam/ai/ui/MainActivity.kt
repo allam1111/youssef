@@ -166,6 +166,37 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+fun ChatBubble(text: String, isUser: Boolean) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 4.dp),
+        horizontalAlignment = if (isUser) Alignment.End else Alignment.Start
+    ) {
+        Box(
+            modifier = Modifier
+                .clip(RoundedCornerShape(
+                    topStart = 16.dp,
+                    topEnd = 16.dp,
+                    bottomStart = if (isUser) 16.dp else 0.dp,
+                    bottomEnd = if (isUser) 0.dp else 16.dp
+                ))
+                .background(
+                    if (isUser) Brush.horizontalGradient(listOf(Color(0xFF4FACFE), Color(0xFF00F2FE)))
+                    else Brush.horizontalGradient(listOf(Color(0xFF243B55), Color(0xFF141E30)))
+                )
+                .padding(12.dp)
+        ) {
+            Text(
+                text = text,
+                color = Color.White,
+                fontSize = 16.sp
+            )
+        }
+    }
+}
+
+@Composable
 fun VoiceWaveform(rms: Float) {
     val infiniteTransition = rememberInfiniteTransition()
     
