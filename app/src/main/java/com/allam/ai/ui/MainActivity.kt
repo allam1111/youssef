@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Canvas
@@ -42,9 +43,34 @@ class MainActivity : ComponentActivity() {
     private lateinit var actionHandler: ActionHandler
     private val apiKey = "AIzaSyC503C9IVomUJEs-KWEvPmssdHMz1anszc"
 
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+        val allGranted = permissions.entries.all { it.value }
+        if (allGranted) {
+            // Permissions granted
+        } else {
+            // Handle cases where some permissions are denied
+        }
+    }
+
+    private fun requestPermissions() {
+        requestPermissionLauncher.launch(
+            arrayOf(
+                Manifest.permission.RECORD_AUDIO,
+                Manifest.permission.CAMERA,
+                Manifest.permission.CALL_PHONE,
+                Manifest.permission.READ_CONTACTS
+            )
+        )
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
+        // Request all permissions on startup
+        requestPermissions()
+
         actionHandler = ActionHandler(this)
         ttsManager = TtsManager(this) {
             // Initial greeting in Egyptian Arabic
