@@ -30,6 +30,11 @@ import androidx.compose.ui.unit.sp
 import com.allam.ai.service.VoiceAssistantService
 import com.allam.ai.ui.theme.*
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import androidx.lifecycle.lifecycleScope
+import com.allam.ai.logic.ActionHandler
+import com.allam.ai.logic.SpeechManager
+import com.allam.ai.logic.TtsManager
 
 class MainActivity : ComponentActivity() {
     private lateinit var speechManager: SpeechManager
